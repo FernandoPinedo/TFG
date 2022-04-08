@@ -224,21 +224,7 @@ switch tiposemaforo
          polarplot(tm+g(semaforo_cont),rm,'m');
          axis off
          sem=[1,2,3,4];
-%          switch ceil(semaforo_cont/15)
-%              case 1
-%                 s=[1,2,3,4];
-%                 sem4=[4,2,3,1];%4 2 3 1
-%              case 2
-%                 s=[1,2,3,4];
-%                 sem4=[2,3,1,4]; %2 3 1 4
-%              case 3
-%                 s=[1,2,3,4];
-%                 sem4=[3,1,4,2];%3 1 4 2
-%              case 4
-%                 s=[1,2,3,4];
-%                 sem4=[1,4,2,3]; %1 4 2 3
-% 
-%          end
+
 end  
             %% Movimiento de los coches           
     [cars, cases]=moveCarFromCross(cars, cases, finalt);
@@ -274,7 +260,7 @@ end
                         clear coches
                end
                for l=1:1:length(occupied)
-                        % plot(cases(occupied(l),2), cases(occupied(l),3), destino(cars(cases(occupied(l),1),4)),'MarkerFaceColor', color(cars(cases(occupied(l),1),3)),'MarkerSize',8);
+                     
                       coches(l)=polarplot(theta(occupied(l)), rho(occupied(l)), destino(cars(cases(occupied(l),1),4)),'MarkerFaceColor', color(cars(cases(occupied(l),1),3)),'MarkerSize',8);
                       axis off
                end
